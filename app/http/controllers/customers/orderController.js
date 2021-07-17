@@ -2,7 +2,6 @@
 const Order=require('../../../models/order')
 const bcrypt=require('bcrypt')
 const moment=require('moment')
-// const { default: Stripe } = require('stripe')
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 function orderController() {
     return {
@@ -74,7 +73,7 @@ function orderController() {
         },
       async show(req,res){
            const order= await Order.findById(req.params.id)
-           // authorize user who can track their order
+           // authorize user who can track their order //
            if(req.user._id.toString()==order.customerId.toString()){
               return res.render('customers/singleOrder',{order})
            }
