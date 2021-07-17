@@ -13,7 +13,7 @@ function orderController() {
                 //about flash
                 // req.flash('error','All fields are required')
                 // req.flash('phone',phone)
-                // req.flash('address',address)
+                // req.flash('address',addres)
                 // return res.redirect('/cart')
                  return res.json({ message : 'All fields are required' });
             }
