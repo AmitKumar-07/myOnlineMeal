@@ -13,7 +13,7 @@ const passport=require('passport')
 const Emitter=require('events')
 
 //port variables
-const PORT=process.env.PORT || 4000
+const PORT=process.env.PORT || 3000
 
 
 //database connection

@@ -10,6 +10,7 @@ function orderController() {
             const { phone, address, stripeToken, paymentType } = req.body
             if(!phone || !address) {
 
+                //about flash
                 // req.flash('error','All fields are required')
                 // req.flash('phone',phone)
                 // req.flash('address',address)
