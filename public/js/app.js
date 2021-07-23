@@ -28203,8 +28203,8 @@ function _initStripe() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\user\Saved Games\Videos\Captures\Desktop\myOnlineMeal\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\user\Saved Games\Videos\Captures\Desktop\myOnlineMeal\resources\scss\app.scss */"./resources/scss/app.scss");
+__webpack_require__(/*! D:\myproject\myOnlineMeal\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\myproject\myOnlineMeal\resources\scss\app.scss */"./resources/scss/app.scss");
 
 
 /***/ })
