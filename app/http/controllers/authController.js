@@ -20,7 +20,7 @@ function authController(){
             }
             //through this we can check if user enter right password and email or not
             passport.authenticate('local', (err, user, info) => {
-                if(err) {       //(err,user,info) it is actually done() function which we called from passport page
+                if(err) {       //(err,user,info) it is actually done() function which we called from passport.js page
                     req.flash('error', info.message )
                     return next(err)
                 }
@@ -56,7 +56,14 @@ function authController(){
                    return res.redirect('/register')
                }
    
-           
+               User.exists({ email: email }, (err, result) => {
+                if(result) {
+                   req.flash('error', 'Email already taken')
+                   req.flash('name', name)
+                   req.flash('email', email) 
+                   return res.redirect('/register')
+                }
+            })
                //hash password
                const hashedpassword=await bcrypt.hash(password,10)
                //create a new user
@@ -73,9 +80,9 @@ function authController(){
                }).catch(err=>{
                   
                 //if we get error go to register page(if email already present in database then it will give error)
-                req.flash('error','Email already taken')
-                req.flash('name',name)
-                req.flash('email',email)
+                req.flash('error','something went wrong')
+                // req.flash('name',name)
+                // req.flash('email',email)
                 return res.redirect('/register')
                })
             
