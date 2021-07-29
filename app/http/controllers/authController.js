@@ -50,6 +50,7 @@ function authController(){
                //validate request
                if(!name||!email||!password)
                {   //here we are sending flash messages to frontend(at register-page)
+                   //flash messages hume fronted pe messages object me milta hs
                    req.flash('error','All fields are required')
                    req.flash('name',name)
                    req.flash('email',email)
