@@ -11,10 +11,10 @@ function initAdmin(socket) {
         headers: {
             "X-Requested-With": "XMLHttpRequest"
         }
-//     }).then(res => {
-//         orders = res.data
-//         markup = generateMarkup(orders)
-//         orderTableBody.innerHTML = markup
+    }).then(res => {
+        orders = res.data
+        markup = generateMarkup(orders)
+        orderTableBody.innerHTML = markup
     }).catch(err => {
         console.log(err)
     })

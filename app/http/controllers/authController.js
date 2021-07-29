@@ -6,10 +6,10 @@ function authController(){
     return {
            // get login
            login(req,res){
-//                res.render('auth/login')
+               res.render('auth/login')
            },
           //post login
-           postLogin(req, res,) {
+           postLogin(req, res, next) {
             const { email,password }= req.body 
             //validate request
             if(!email||!password)
@@ -22,11 +22,11 @@ function authController(){
             passport.authenticate('local', (err, user, info) => {
                 if(err) {       //(err,user,info) it is actually done() function which we called from passport page
                     req.flash('error', info.message )
-//                     return next(err)
+                    return next(err)
                 }
-//                 if(!user) {
-//                     req.flash('error', info.message )
-//                     return res.redirect('/login')
+                if(!user) {
+                    req.flash('error', info.message )
+                    return res.redirect('/login')
                 }
                 req.logIn(user, (err) => {
                     if(err) {
@@ -50,7 +50,6 @@ function authController(){
                //validate request
                if(!name||!email||!password)
                {   //here we are sending flash messages to frontend(at register-page)
-                   //flash messages hume fronted pe messages object me milta hs
                    req.flash('error','All fields are required')
                    req.flash('name',name)
                    req.flash('email',email)
