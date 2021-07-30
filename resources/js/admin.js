@@ -1,6 +1,7 @@
 import axios from 'axios'
-import moment from 'moment'
 import Noty from 'noty'
+import moment from 'moment'
+
 
 function initAdmin(socket) {
     const orderTableBody = document.querySelector('#orderTableBody')
