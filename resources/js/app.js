@@ -1,8 +1,8 @@
 //here listen event on buttons and etc
 import axios from 'axios'
+import  initAdmin  from './admin'
 import Noty from 'noty'
 import moment from 'moment'
-import  initAdmin  from './admin'
 import { initStripe } from './stripe'
 let addToCart= document.querySelectorAll('.add-to-cart')
 let cartCount=document.querySelectorAll('#cartCounter')

@@ -1,6 +1,6 @@
 //controller for login and register page 
-const User=require('../../models/user')
 const bcrypt=require('bcrypt')
+const User=require('../../models/user')
 const passport = require('passport')
 function authController(){
     return {
