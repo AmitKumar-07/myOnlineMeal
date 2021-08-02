@@ -1,9 +1,9 @@
 //web routing configration
 const authController = require('../app/http/controllers/authController')
 const cartController = require('../app/http/controllers/customers/cartController')
-const adminOrderController=require('../app/http/controllers/admin/orderController')
 const statusController=require('../app/http/controllers/admin/statusController')
 const orderController = require('../app/http/controllers/customers/orderController')
+const adminOrderController=require('../app/http/controllers/admin/orderController')
 const homeController=require('../app/http/controllers/homeController')
 
 //middleware
