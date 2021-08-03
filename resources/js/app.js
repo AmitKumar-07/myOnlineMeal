@@ -128,7 +128,7 @@ updateStatus(order);
 //payement ajax call
 initStripe()
 
-initAdmin()
+// initAdmin()
 let socket = io()
 
 // Join
@@ -139,7 +139,7 @@ if(order) {
 //windoe.location.pathname this tell url form of admin pade('/admin/orders')
 let adminAreaPath = window.location.pathname
 if(adminAreaPath.includes('admin')) {
-    // initAdmin(socket)
+    initAdmin(socket)
     socket.emit('join', 'adminRoom')
 }
 

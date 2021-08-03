@@ -1,9 +1,9 @@
 import axios from 'axios'
 import Noty from 'noty'
 import moment from 'moment'
-const socket=io()
+// const socket=io()
 
-function initAdmin() {
+function initAdmin(socket) {
     const orderTableBody = document.querySelector('#orderTableBody')
     let orders = []
     let markup
