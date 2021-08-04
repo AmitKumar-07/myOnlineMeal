@@ -68,11 +68,14 @@ app.use((req, res, next) => {
 
 //set templates engine
 app.use(expressLayout)
-app.set('views',path.join(__dirname,'/resources/views'))
+app.set('views',path.join(__dirname,'resources/views'))
 app.set('view engine','ejs')
 
 //(routing configration)it is a instance actually we are calling initRoutes Function from here
 require('./routes/web')(app)
+app.use((req,res)=>{
+    res.status(404).render('errors/errorPage')
+})
 
 //listening port
 const server=app.listen(PORT,()=>{

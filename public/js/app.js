@@ -27757,7 +27757,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
 
 
-
+ // const socket=io()
 
 function initAdmin(socket) {
   var orderTableBody = document.querySelector('#orderTableBody');
@@ -27993,7 +27993,8 @@ function updateStatus(order) {
 
 updateStatus(order); //payement ajax call
 
-Object(_stripe__WEBPACK_IMPORTED_MODULE_4__["initStripe"])();
+Object(_stripe__WEBPACK_IMPORTED_MODULE_4__["initStripe"])(); // initAdmin()
+
 var socket = io(); // Join
 
 if (order) {
