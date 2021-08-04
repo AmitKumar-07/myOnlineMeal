@@ -101,7 +101,7 @@ div nav li a {
 }
 
 .minimumHeight{
-    min-height:540px;
+    min-height: 534px;;
 }
 .solidBorder{
    border: 3px solid rgb(136, 129, 98); 
@@ -128,7 +128,7 @@ section.cart {
 }
 section.login {
     background: $secondary;
-    min-height: calc(100vh - 86px);
+    min-height: calc(100vh - 230px);
     a {
         color: $primary;
         &:hover {
@@ -136,7 +136,12 @@ section.login {
         }
     }
 }
-
+.pagenotfound {
+    min-height: calc(100vh - 230px);
+}
+// section.page-wrap {
+//     min-height: calc(100 vh);
+// }
 .noty_theme__mint {
     border-radius: 50px!important;
     padding-left: 8px!important;
