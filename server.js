@@ -52,7 +52,6 @@ app.use(passport.initialize())//passport initialized
 app.use(passport.session()) //coz it works with the help of session
 
 app.use(flash())
-
 //asset from where static files can get
 app.use(express.static('public'))
 // for usinf json file
